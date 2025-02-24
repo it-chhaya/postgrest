@@ -1,31 +1,6 @@
 # pgjwt
 PostgreSQL implementation of [JSON Web Tokens](https://jwt.io/)
 
-## Dependencies
-
-This code requires the pgcrypto extension, included in most
-distribution's "postgresql-contrib" package.  The tests require the
-pgtap extension to run.
-
-## Install
-
-You will require sudo privledges and the postgres development
-libraries for your operating system in most cases.  For ubuntu on
-postgres 9.5 for example, you can install them with:
-
-    sudo apt-get install postgresql-server-dev-9.5
-
-Clone the repository and then run:
-
-    'make install'
-
-This creates a new extension that can be installed with 'CREATE
-EXTENSION pgjwt;'
-
-To run the tests install pgtap and run 'pg_prove test/test.sql'.
-Another approach is to use the docker based test runner, but running
-'./test.sh'.  This will require you have docker installed.
-
 ## Usage
 
 Create a token.  The first argument must be valid json, the second argument any text:
